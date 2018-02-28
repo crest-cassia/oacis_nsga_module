@@ -1,0 +1,18 @@
+{
+    "simulator" : "zdt4",
+    "host" : "localhost",
+    "input" : {
+        "p1" : {"type" : "Float", "domain": [0.0, 1.0]},
+        "p2" : {"type" : "Float", "domain": [-5.0, 5.0]},
+        "p3" : {"type" : "Float", "domain": [-5.0, 5.0]},
+        "p4" : {"type" : "Float", "domain": [-5.0, 5.0]},
+        "p5" : {"type" : "Float", "domain": [-5.0, 5.0]},
+        "p6" : {"type" : "Float", "domain": [-5.0, 5.0]},
+        "p7" : {"type" : "Float", "domain": [-5.0, 5.0]},
+        "p8" : {"type" : "Float", "domain": [-5.0, 5.0]},
+        "p9" : {"type" : "Float", "domain": [-5.0, 5.0]},
+        "p10" : {"type" : "Float", "domain": [-5.0, 5.0]}
+    },
+    "objectives" : ["f1", "f2"],
+    "num_of_runs" : 2
+}

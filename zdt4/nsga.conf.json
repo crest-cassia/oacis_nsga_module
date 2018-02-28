@@ -1,0 +1,12 @@
+{
+  "max_generation" : 10,
+  "population_size" : 10,
+  "crossover_rate" : 1.0,
+  "use_real_value_xover" : true,
+  "use_n_point_xover" : false,
+  "xover_num_point" : 1,
+  "mutation_rate" : 0.05,
+  "x_eta" : 20,
+  "m_eta" : 20,
+  "seed" : 0
+}
