@@ -1,6 +1,6 @@
 {
-  "max_generation" : 10,
-  "population_size" : 10,
+  "max_generation" : 100,
+  "population_size" : 100,
   "crossover_rate" : 1.0,
   "use_real_value_xover" : true,
   "use_n_point_xover" : false,

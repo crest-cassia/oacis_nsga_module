@@ -1,5 +1,3 @@
-# require File.join(ENV['OACIS_ROOT'], 'config/environment')
-
 require_relative './nsga/nsga_ii.rb'
 require_relative './target.rb'
 
@@ -15,8 +13,6 @@ class NSGA_II_Optimizer < NSGA_II
     @num_of_runs = @target.num_of_runs
 
     @ranges = @target.ranges
-
-    binding.pry
   end
 
   # 
@@ -25,7 +21,6 @@ class NSGA_II_Optimizer < NSGA_II
       vs = Hash[@ranges.map{|k,r| [k,rand(r)] }]
       ps = @sim.find_or_create_parameter_set(vs)
       ps.find_or_create_runs_upto(@num_of_runs, submitted_to: @host, host_param: @host.default_host_parameters)
-      # logger.info "Created a new PS: #{ps.v}"
       @population << Individual.new(vs.values, ps.id)
       ps
     }
@@ -72,18 +67,4 @@ class NSGA_II_Optimizer < NSGA_II
       end
     }
   end
-end
-
-def debug
-  require 'pry'
-  
-  binding.pry
-end
-
-###
-# 
-# $OACIS_ROOT/bin/oacis_ruby nsga_module.rb
-###
-if __FILE__ == $0
-  debug
 end

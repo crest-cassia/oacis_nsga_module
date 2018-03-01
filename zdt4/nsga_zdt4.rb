@@ -10,8 +10,7 @@ params = ARGV.getopts("c:t:")
 
 conf_f = params["c"] #"nsga.conf.json"
 target_f = params["t"] # "target.json"
-require 'pry'
-binding.pry
+
 @target = ZDT4.new(target_f)  
 @optimizer = NSGA_II_Optimizer.new(@target, conf_f)
 

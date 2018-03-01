@@ -11,7 +11,6 @@ class Target
     @host = @definition["host"]
     @num_of_runs = @definition["num_of_runs"]
     @parameter_names = @definition["input"].keys
-    # @ranges = @parameter_names.map{|key| @definition["input"][key]["domain"]}
     @ranges = Hash[@definition["input"].map{|k,df| 
       [k,(df["domain"].min..df["domain"].max)] }]
     @objectives = @definition["objectives"]
