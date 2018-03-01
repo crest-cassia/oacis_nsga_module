@@ -61,7 +61,7 @@ class NSGA_II_Optimizer < NSGA_II
     OacisWatcher::start { |w|
       initial_parameter_sets
 
-      1.upto(max_generation) do |generation|
+      1.upto(@max_generation) do |generation|
         evolve
         puts "generation: #{generation}"
       end
